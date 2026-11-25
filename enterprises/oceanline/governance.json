@@ -5,6 +5,7 @@
   "access": {
     "audit": ["control_center"],
     "vessels": ["smartport", "control_center"],
+    "ais": ["smartport", "control_center"],
     "fleet_eta": ["smartport", "importexport", "control_center"],
     "manifests": ["customs"],
     "eta_predictions": ["control_center"],
@@ -28,5 +29,6 @@
     "jit_notice_h": 6
   },
   "human_approval_required": ["Deviasi rute / perubahan pelabuhan tujuan kapal"],
-  "ai_limits": ["Agen tidak mengendalikan navigasi kapal nyata; hanya prediksi ETA dan negosiasi jadwal sandar (simulasi)"]
+  "ai_limits": ["Agen tidak mengendalikan navigasi kapal nyata; hanya prediksi ETA dan negosiasi jadwal sandar (simulasi)",
+    "Umpan AIS nyata (AISStream.io) hanya dibaca sebagai konteks lingkungan; tidak ada keputusan otomatis atas kapal nyata"]
 }

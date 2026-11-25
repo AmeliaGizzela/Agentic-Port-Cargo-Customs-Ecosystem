@@ -6,3 +6,4 @@ logs/
 enterprises/*/runtime/
 enterprises/*/models/
 control_center/runtime/
+.env

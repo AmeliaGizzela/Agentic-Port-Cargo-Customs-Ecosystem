@@ -57,18 +57,46 @@ with tabs[1]:
     v = ui.get(EID, "/api/v1/vessels")
     if v:
         df = pd.DataFrame([{"Kapal": x["vesselId"], "Nama": x["name"], "lat": x["livePosition"]["lat"],
-                            "lon": x["livePosition"]["lon"], "ETA": x["currentEtaUtc"],
-                            "Jenis": "OceanLine" if x["ownFleet"] else "Pelayaran lain"} for x in v["vessels"]])
+                            "lon": x["livePosition"]["lon"], "ETA": x["currentEtaUtc"], "Kecepatan (kn)": "",
+                            "Jenis": "OceanLine" if x["ownFleet"] else "Pelayaran lain (simulasi)"}
+                           for x in v["vessels"]])
         port = pd.DataFrame([{"Kapal": "PORT", "Nama": "Pelabuhan Nusa Raya", "lat": -6.10, "lon": 106.88, "ETA": "",
-                              "Jenis": "Pelabuhan"}])
-        fig = px.scatter_geo(pd.concat([df, port]), lat="lat", lon="lon", color="Jenis", text="Kapal",
-                             hover_name="Nama", hover_data=["ETA"], projection="mercator")
+                              "Kecepatan (kn)": "", "Jenis": "Pelabuhan"}])
+        frames = [df, port]
+        c1, c2 = st.columns([1, 3])
+        show_ais = c1.toggle("Kapal nyata (AIS)", value=True, key="ol_ais",
+                             help="Posisi AIS real-time dari AISStream.io di sekitar Laut Jawa (bukan armada simulasi).")
+        ais = ui.get(EID, "/api/v1/ais/live", quiet=True) if show_ais else None
+        if ais:
+            if ais["status"] == "connected":
+                c2.success(f"AIS nyata: {ais['count']} kapal, {ais['messages']} pesan sejak "
+                           f"{ais['connectedSinceUtc']} (sumber: {ais['source']})")
+            elif ais["status"] == "disabled":
+                c2.info("Umpan AIS nonaktif. Set `AISSTREAM_API_KEY` (env atau file `.env`) lalu restart server "
+                        "OceanLine. Kunci gratis: https://aisstream.io")
+            else:
+                c2.warning(f"Umpan AIS: {ais['status']} - {ais.get('lastError') or ''}")
+            if ais["vessels"]:
+                frames.append(pd.DataFrame([{"Kapal": a["shipName"], "Nama": f"MMSI {a['mmsi']}", "lat": a["lat"],
+                                             "lon": a["lon"], "ETA": a["timeUtc"][:19], "Kecepatan (kn)": a["speedKn"],
+                                             "Jenis": "AIS nyata"} for a in ais["vessels"]]))
+        allpts = pd.concat(frames)
+        fig = px.scatter_geo(allpts, lat="lat", lon="lon", color="Jenis", text="Kapal",
+                             hover_name="Nama", hover_data=["ETA", "Kecepatan (kn)"], projection="mercator",
+                             color_discrete_map={"OceanLine": "#1f77b4", "Pelayaran lain (simulasi)": "#ff7f0e",
+                                                 "Pelabuhan": "#d62728", "AIS nyata": "#7f7f7f"})
         fig.update_geos(fitbounds="locations", showcountries=True, showland=True, landcolor="#e9ecef",
                         showocean=True, oceancolor="#d6eaf8")
         fig.update_traces(marker=dict(size=12), textposition="top center")
+        fig.update_traces(selector=dict(name="AIS nyata"), marker=dict(size=6, opacity=0.6), text=None, mode="markers")
         fig.update_layout(height=470, margin=dict(l=0, r=0, t=10, b=0))
         st.plotly_chart(fig, width="stretch")
-        st.caption(f"Posisi diproyeksikan dari ETA & kecepatan rencana pada waktu simulasi {v['simTimeUtc']}.")
+        st.caption(f"Posisi armada simulasi diproyeksikan dari ETA & kecepatan rencana pada waktu simulasi "
+                   f"{v['simTimeUtc']}. Titik abu-abu = kapal nyata (AIS), hanya sebagai konteks lingkungan.")
+        if ais and ais["vessels"]:
+            with st.expander(f"Daftar kapal AIS nyata ({ais['count']})"):
+                st.dataframe(pd.DataFrame(ais["vessels"])[["mmsi", "shipName", "lat", "lon", "speedKn", "courseDeg",
+                                                            "navStatus", "timeUtc"]], width="stretch", hide_index=True)
 
 with tabs[2]:
     m = ui.get(EID, "/api/v1/model", as_eid="control_center")

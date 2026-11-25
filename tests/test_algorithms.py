@@ -173,3 +173,22 @@ def test_globalcargo_envelope_mapping():
                                                    "WaitingRelease": 0, "Express": False, "Status": "ON_TIME"}]}}
     row = sm.globalcargo_delivery(doc)[0]
     assert row["last_delivery_h"] == pytest.approx(11.5) and not math.isnan(row["first_pickup_h"])
+
+
+# ---------------------------------------------------------------------------
+# Umpan AIS nyata (AISStream.io) - parser pesan, tanpa jaringan
+# ---------------------------------------------------------------------------
+def test_ais_parse_position_report():
+    from enterprises.oceanline.ais_feed import AisFeed, parse_position
+    msg = {"MessageType": "PositionReport",
+           "MetaData": {"MMSI": 525001234, "ShipName": "KM NUSANTARA  ", "latitude": -6.02, "longitude": 106.9,
+                        "time_utc": "2026-11-25 03:00:00.123 +0000 UTC"},
+           "Message": {"PositionReport": {"Sog": 11.5, "Cog": 270.0, "TrueHeading": 268, "NavigationalStatus": 0}}}
+    doc = parse_position(msg)
+    assert doc["mmsi"] == "525001234" and doc["shipName"] == "KM NUSANTARA"
+    assert doc["lat"] == -6.02 and doc["speedKn"] == 11.5 and doc["courseDeg"] == 270.0
+    assert parse_position({"MessageType": "ShipStaticData"}) is None
+    assert parse_position({"MessageType": "PositionReport", "MetaData": {}}) is None
+    feed = AisFeed()
+    snap = feed.snapshot()
+    assert snap["status"] == "disabled" and snap["count"] == 0 and "boundingBox" in snap

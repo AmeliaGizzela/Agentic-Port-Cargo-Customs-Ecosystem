@@ -62,6 +62,18 @@ Alternatif: menu **Run and Debug** (`F5`) → pilih *"Ekosistem lengkap (run_all
    dashboard **Customs** http://127.0.0.1:8505 (role **Customs Officer**) → *Setujui / Tahan / Tolak*. AI tidak
    pernah menyetujui sendiri; keputusan petugas memicu release → replanning truk.
 
+## 2b. Opsional: kapal nyata dari AISStream.io
+
+Peta **Pelacakan Kapal** di dashboard OceanLine dapat menampilkan posisi AIS real-time kapal nyata di Laut Jawa
+sebagai layer konteks lingkungan (armada OceanLine sendiri tetap simulasi, agar skenario tetap bisa dikendalikan).
+
+1. Daftar kunci API gratis di https://aisstream.io.
+2. Salin `.env.example` menjadi `.env` dan isi `AISSTREAM_API_KEY=...` (atau set sebagai environment variable).
+3. Restart `python run_all.py`. Server OceanLine membuka WebSocket ke AISStream di thread latar; data tersedia di
+   `GET /api/v1/ais/live` (resource governance `ais`) dan muncul di peta sebagai titik abu-abu.
+
+Tanpa kunci, fitur ini nonaktif secara otomatis dan sistem berjalan seperti biasa.
+
 ## 3. Evaluasi & pengujian
 
 ```bash

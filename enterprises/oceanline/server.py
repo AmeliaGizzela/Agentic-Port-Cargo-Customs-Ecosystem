@@ -15,6 +15,7 @@ from common.agent_base import EnterpriseContext
 from common.config import DATA_DIR, enterprise_db_path, model_dir
 from common.db import Database
 from common.enterprise_base import create_enterprise_app, make_guard, register_tool
+from enterprises.oceanline.ais_feed import AisFeed
 from enterprises.oceanline.agents import (DocStore, EtaAgent, ManifestAgent, NegotiationAgent, current_eta_h,
                                           ol_utility, own_vessels, position_now)
 from enterprises.oceanline.eta_model import EtaModel
@@ -24,6 +25,7 @@ db = Database(enterprise_db_path(EID))
 ctx = EnterpriseContext(EID, db, audit_table="auditEvents")
 store = DocStore(db)
 eta_model = EtaModel(model_dir(EID), DATA_DIR / "oceanline" / "voyage_history.csv").load_or_train()
+ais_feed = AisFeed().start()   # umpan AIS nyata (opsional; aktif bila AISSTREAM_API_KEY diset)
 
 
 def reset() -> None:
@@ -67,6 +69,14 @@ def get_vessel(vessel_id: str, consumer: str = Depends(make_guard(ctx, "vessels"
     if not v:
         raise HTTPException(404, "vessel not found")
     return _vessel_view(v)
+
+
+@app.get("/api/v1/ais/live", tags=["native"])
+def ais_live(consumer: str = Depends(make_guard(ctx, "ais"))):
+    """Posisi kapal nyata di sekitar pelabuhan dari AISStream.io (layer lingkungan; bukan armada simulasi)."""
+    out = ais_feed.snapshot()
+    out["simTimeUtc"] = tu.to_utc_z(ctx.now())
+    return out
 
 
 @app.get("/api/v1/etaPredictions", tags=["native"])
