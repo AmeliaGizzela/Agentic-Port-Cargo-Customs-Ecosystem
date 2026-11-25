@@ -61,12 +61,28 @@ with tabs[1]:
                             "Jenis": "OceanLine" if x["ownFleet"] else "Pelayaran lain"} for x in v["vessels"]])
         port = pd.DataFrame([{"Kapal": "PORT", "Nama": "Pelabuhan Nusa Raya", "lat": -6.10, "lon": 106.88, "ETA": "",
                               "Jenis": "Pelabuhan"}])
-        fig = px.scatter_geo(pd.concat([df, port]), lat="lat", lon="lon", color="Jenis", text="Kapal",
-                             hover_name="Nama", hover_data=["ETA"], projection="mercator")
-        fig.update_geos(fitbounds="locations", showcountries=True, showland=True, landcolor="#e9ecef",
-                        showocean=True, oceancolor="#d6eaf8")
-        fig.update_traces(marker=dict(size=12), textposition="top center")
-        fig.update_layout(height=470, margin=dict(l=0, r=0, t=10, b=0))
+        map_view = st.radio("Tampilan peta", ["Peta jalan", "Satelit"], horizontal=True)
+        fig = px.scatter_map(
+            pd.concat([df, port], ignore_index=True), lat="lat", lon="lon", color="Jenis",
+            hover_name="Nama", hover_data=["Kapal", "ETA"], zoom=6,
+            center={"lat": -5.4, "lon": 107.5}, map_style="open-street-map",
+            color_discrete_map={"OceanLine": "#0072ce", "Pelayaran lain": "#45c0f0", "Pelabuhan": "#e63946"},
+        )
+        if map_view == "Satelit":
+            fig.update_layout(map_style="white-bg", map_layers=[{
+                "below": "traces",
+                "sourcetype": "raster",
+                "source": [
+                    "https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/{z}/{y}/{x}"
+                ],
+                "sourceattribution": "Esri, Maxar, Earthstar Geographics, and the GIS User Community",
+            }])
+        fig.update_traces(marker=dict(size=12))
+        fig.update_layout(
+            height=520, margin=dict(l=0, r=0, t=10, b=0),
+            legend=dict(orientation="h", x=0, y=1.01, yanchor="bottom"),
+            uirevision="oceanline-map",
+        )
         st.plotly_chart(fig, width="stretch")
         st.caption(f"Posisi diproyeksikan dari ETA & kecepatan rencana pada waktu simulasi {v['simTimeUtc']}.")
 
