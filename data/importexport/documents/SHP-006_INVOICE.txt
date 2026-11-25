@@ -1,0 +1,14 @@
+INVOICE
+Invoice No: INV-0471-006
+Date: 28/10/2026
+Seller / Exporter: Dongguan Mobile Tech Ltd
+Buyer / Consignee: PT ImportExport Corp
+Description of Goods: Smartphones (cellular handsets)
+HS Code: 8517.13
+Quantity: 16,000 pcs
+Unit Price: USD 13.12
+Total Amount: USD 210,000.00
+Incoterms: CIF Nusa Raya
+Country of Origin: China
+Payment Terms: L/C at sight
+Amount due for payment as invoiced.

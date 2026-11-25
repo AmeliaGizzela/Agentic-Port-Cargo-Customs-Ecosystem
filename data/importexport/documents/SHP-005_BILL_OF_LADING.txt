@@ -1,0 +1,13 @@
+B/L - COMBINED TRANSPORT
+B/L No: OLBS260470
+Shipper: Pohang Steel Trading Co.
+Consignee: PT ImportExport Corp
+Notify Party: SAME AS CONSIGNEE
+Vessel: MV Ocean Rinjani  Voyage: 045S
+Port of Loading: Busan
+Port of Discharge: Nusa Raya, Indonesia
+Number of Containers: 6
+Gross Weight: 150,000 kg
+Freight: PREPAID
+SHIPPED ON BOARD in apparent good order and condition.
+Container Nos: OCLU5418934, OCLU9398441, OCLU3997281

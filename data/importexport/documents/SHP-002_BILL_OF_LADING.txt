@@ -1,0 +1,13 @@
+BILL OF LADING
+B/L No: OLSZ260452
+Shipper: Nagoya Precision Gear K.K.
+Consignee: PT ImportExport Corp
+Notify Party: SAME AS CONSIGNEE
+Vessel: MV Ocean Pioneer  Voyage: 026E
+Port of Loading: Shenzhen
+Port of Discharge: Nusa Raya, Indonesia
+Number of Containers: 6
+Gross Weight: 96,000 kg
+Freight: PREPAID
+SHIPPED ON BOARD in apparent good order and condition.
+Container Nos: OCLU8707870, OCLU9996414, OCLU3094235

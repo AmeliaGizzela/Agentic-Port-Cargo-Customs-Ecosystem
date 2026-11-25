@@ -1,0 +1,14 @@
+PROFORMA / COMMERCIAL INVOICE
+Buyer / Consignee: PT ImportExport Corp
+Unit Price: USD 1,733.33
+Incoterms: FOB Nusa Raya
+Payment Terms: L/C at sight
+Seller / Exporter: Pohang Steel Trading Co.
+HS Code: 7208.51
+Quantity: 150 plates
+Description of Goods: Hot-rolled flat steel plates
+Amount due for payment as invoiced.
+Date: 28/10/2026
+Country of Origin: South Korea
+Invoice No: INV-0470-005
+Total Amount: USD 260,000.00

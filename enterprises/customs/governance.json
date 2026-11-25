@@ -1,0 +1,35 @@
+{
+  "enterprise": "customs",
+  "owner": "Customs Authority (fiktif)",
+  "description": "G_5 - Kebijakan tata kelola Customs Authority (otoritas regulator)",
+  "access": {
+    "audit": ["control_center"],
+    "declarations": [],
+    "review_queue": [],
+    "risk_model": ["control_center"],
+    "policy_rules": ["*"],
+    "intel": [],
+    "manifests": [],
+    "declaration_status": ["importexport", "smartport", "control_center"],
+    "kpi": ["control_center"],
+    "tool:get_declaration_status": ["importexport", "smartport", "control_center"]
+  },
+  "data_minimization": [
+    "Skor risiko, aturan yang terpicu, dan nota intelijen TIDAK dibagikan ke pihak mana pun",
+    "ImportExport hanya melihat status deklarasinya; SmartPort hanya melihat status release (SPPB)",
+    "Control Center hanya menerima status & KPI agregat"
+  ],
+  "decision_policy": {
+    "lane_hours": {"GREEN": 0.5, "YELLOW": 3.0, "RED": 8.0},
+    "red_inspection_after_discharge_h": 6.0,
+    "importer_scores": {"PT ImportExport Corp": 0.85}
+  },
+  "human_approval_required": [
+    "SEMUA keputusan release (SPPB), hold, dan penolakan wajib oleh petugas Bea Cukai (role Customs Officer/Supervisor)",
+    "Mode simulasi 'auto_officer' hanya proxy manusia untuk evaluasi KPI dan dicatat sebagai keputusan manusia tersimulasi"
+  ],
+  "ai_limits": [
+    "AI tidak dapat memberikan persetujuan kepabeanan; AI hanya merekomendasikan jalur & menjelaskan alasannya",
+    "Dokumen kepabeanan hanya diproses melalui mekanisme otoritas resmi (disimulasikan)"
+  ]
+}

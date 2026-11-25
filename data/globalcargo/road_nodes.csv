@@ -1,0 +1,15 @@
+NodeId,Name,Lat,Lon,Kind
+PORT,Gerbang Terminal Nusa Raya,-6.105,106.885,port
+DEPOT,Depo GlobalCargo Cakung,-6.18,106.945,depot
+J_CILINCING,Simpang Cilincing,-6.12,106.94,junction
+TOL_CAKUNG,Gerbang Tol Cakung,-6.165,106.96,toll
+TOL_JORR_E,JORR Timur,-6.23,106.975,toll
+TOL_CIKAMPEK_KM10,Tol Cikampek KM10,-6.25,107.01,toll
+BEKASI_X,Simpang Bekasi Timur,-6.26,107.05,junction
+CIKARANG_X,Simpang Cikarang,-6.29,107.16,junction
+KARAWANG_X,Simpang Karawang Barat,-6.33,107.29,junction
+ARTERI_KALIMALANG,Jalan Arteri Kalimalang,-6.24,106.99,arterial
+WH_SUNTER,Gudang CV Sunter Jaya,-6.14,106.87,warehouse
+WH_BEKASI,Gudang PT Mitra Retail Bekasi,-6.25,107.07,warehouse
+WH_CIKARANG,Gudang ImportExport Cikarang,-6.3,107.18,warehouse
+WH_KARAWANG,Gudang ImportExport Karawang,-6.34,107.31,warehouse

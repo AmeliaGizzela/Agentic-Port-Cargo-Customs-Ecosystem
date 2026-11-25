@@ -1,0 +1,4 @@
+berth_id,length_m,max_draft_m,cranes,crane_rate
+B1,350,14.5,3,25
+B2,300,13.0,3,25
+B3,220,11.0,2,22

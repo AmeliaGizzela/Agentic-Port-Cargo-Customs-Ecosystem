@@ -1,0 +1,3 @@
+ContractId,Customer,ShipmentRef,DestinationNode,DeadlineEpoch,Containers,Type,PricePerTrip,Surcharge,PenaltyRate,Status
+CT-OTH-001,PT Mitra Retail,OTH-001,WH_BEKASI,1795179600,5,STANDARD,2.4,0.0,2,ACTIVE
+CT-OTH-002,CV Sunter Jaya,OTH-002,WH_SUNTER,1795215600,5,STANDARD,1.8,0.0,2,ACTIVE

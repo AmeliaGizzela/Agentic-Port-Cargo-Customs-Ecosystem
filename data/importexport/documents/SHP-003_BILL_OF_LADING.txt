@@ -1,0 +1,13 @@
+OCEAN BILL OF LADING
+Port of Discharge: Nusa Raya, Indonesia
+B/L No: OLCH260460
+Container Nos: OCLU3728882, OCLU7210606, OCLU6960453
+Gross Weight: 110,000 kg
+Port of Loading: Chennai
+Number of Containers: 5
+Freight: PREPAID
+Notify Party: SAME AS CONSIGNEE
+Consignee: PT ImportExport Corp
+Shipper: Gujarat Chemicals Pvt Ltd
+SHIPPED ON BOARD in apparent good order and condition.
+Vessel: MV Ocean Mercury  Voyage: 114W

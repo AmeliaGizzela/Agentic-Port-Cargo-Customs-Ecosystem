@@ -1,0 +1,29 @@
+{
+  "enterprise": "globalcargo",
+  "owner": "GlobalCargo Logistics (fiktif)",
+  "description": "G_3 - Kebijakan tata kelola GlobalCargo Logistics",
+  "access": {
+    "audit": ["control_center"],
+    "Fleet": ["control_center"],
+    "Jobs": ["control_center"],
+    "TripPlan": ["control_center"],
+    "RoadNetwork": ["control_center", "importexport"],
+    "Contracts": ["control_center"],
+    "DeliveryStatus": ["importexport", "control_center"],
+    "Kpi": ["control_center"],
+    "tool:shortest_route": ["importexport", "smartport", "control_center"],
+    "tool:get_delivery_status": ["importexport", "control_center"]
+  },
+  "data_minimization": [
+    "Pelanggan hanya melihat status pengiriman miliknya sendiri",
+    "Struktur biaya & margin internal tidak dibagikan; hanya harga penawaran"
+  ],
+  "decision_policy": {
+    "subcon_pool_size": 4,
+    "subcon_mobilization_h": 1.0,
+    "express_margin_jt_per_container": 0.3,
+    "max_driver_shift_h": 14
+  },
+  "human_approval_required": ["Kontrak subkon di atas Rp 50 juta (Logistics Manager)"],
+  "ai_limits": ["Agen tidak mengirim truk keluar gate tanpa status kontainer CONFIRMED (release Bea Cukai)"]
+}

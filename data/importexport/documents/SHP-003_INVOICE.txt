@@ -1,0 +1,14 @@
+INVOICE
+Invoice No: INV-0460-003
+Date: 28/10/2026
+Seller / Exporter: Gujarat Chemicals Pvt Ltd
+Buyer / Consignee: PT ImportExport Corp
+Description of Goods: Salts of formic acid (sodium formate) - industrial chemical
+HS Code: 2915.12
+Quantity: 110,000 kg
+Unit Price: USD 0.86
+Total Amount: USD 95,000.00
+Incoterms: CIF Nusa Raya
+Country of Origin: India
+Payment Terms: L/C at sight
+Amount due for payment as invoiced.

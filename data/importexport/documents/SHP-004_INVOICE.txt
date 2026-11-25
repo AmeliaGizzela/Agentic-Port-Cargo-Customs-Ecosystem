@@ -1,0 +1,14 @@
+PROFORMA / COMMERCIAL INVOICE
+Invoice No: INV-0463-004
+Date: 28/10/2026
+Seller / Exporter: Saigon Textile JSC
+Buyer / Consignee: PT ImportExport Corp
+Description of Goods: Printed plain-weave cotton fabric
+HS Code: 5208.52
+Quantity: 98,000 m
+Unit Price: USD 1.53
+Total Amount: USD 150,000.00
+Incoterms: FOB Nusa Raya
+Country of Origin: Vietnam
+Payment Terms: L/C at sight
+Amount due for payment as invoiced.

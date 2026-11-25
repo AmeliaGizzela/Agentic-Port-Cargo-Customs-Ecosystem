@@ -1,0 +1,14 @@
+COMMERCIAL INVOICE
+Invoice No: INV-0451-001
+Date: 28/10/2026
+Seller / Exporter: Shenzhen Microtech Co., Ltd
+Buyer / Consignee: PT ImportExport Corp
+Description of Goods: Integrated circuits (microcontroller units)
+HS Code: 8542.31
+Quantity: 120,000 pcs
+Unit Price: USD 4.00
+Total Amount: USD 480,000.00
+Incoterms: CIF Nusa Raya
+Country of Origin: China
+Payment Terms: L/C at sight
+Amount due for payment as invoiced.

@@ -1,0 +1,11 @@
+FORM E / COO
+Reference No: COO-63-004
+Exporter: Saigon Textile JSC
+Consignee: PT ImportExport Corp
+Scheme: ATIGA
+HS Code: 5208.52
+Description: Printed plain-weave cotton fabric
+Country of Origin: Vietnam
+Origin Criterion: WO / RVC 40%
+Invoice No: INV-0463-004
+Certified by issuing authority of the exporting country.

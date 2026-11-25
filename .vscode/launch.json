@@ -1,0 +1,51 @@
+{
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "name": "Ekosistem lengkap (run_all.py)",
+      "type": "debugpy",
+      "request": "launch",
+      "program": "${workspaceFolder}/run_all.py",
+      "cwd": "${workspaceFolder}",
+      "env": {"PYTHONPATH": "${workspaceFolder}"},
+      "console": "integratedTerminal"
+    },
+    {
+      "name": "Hanya server API (run_all.py --no-dash)",
+      "type": "debugpy",
+      "request": "launch",
+      "program": "${workspaceFolder}/run_all.py",
+      "args": ["--no-dash"],
+      "cwd": "${workspaceFolder}",
+      "env": {"PYTHONPATH": "${workspaceFolder}"},
+      "console": "integratedTerminal"
+    },
+    {
+      "name": "Debug server SmartPort (port 8002)",
+      "type": "debugpy",
+      "request": "launch",
+      "module": "uvicorn",
+      "args": ["enterprises.smartport.server:app", "--port", "8002"],
+      "cwd": "${workspaceFolder}",
+      "env": {"PYTHONPATH": "${workspaceFolder}"},
+      "console": "integratedTerminal"
+    },
+    {
+      "name": "Evaluasi strategi (semua skenario)",
+      "type": "debugpy",
+      "request": "launch",
+      "module": "simulation.run_evaluation",
+      "cwd": "${workspaceFolder}",
+      "env": {"PYTHONPATH": "${workspaceFolder}"},
+      "console": "integratedTerminal"
+    },
+    {
+      "name": "Generate data sintetis",
+      "type": "debugpy",
+      "request": "launch",
+      "module": "data.generate_synthetic",
+      "cwd": "${workspaceFolder}",
+      "console": "integratedTerminal"
+    }
+  ]
+}

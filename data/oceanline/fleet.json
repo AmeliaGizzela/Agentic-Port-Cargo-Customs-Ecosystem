@@ -1,0 +1,176 @@
+[
+  {
+    "vesselId": "V001",
+    "imo": "IMO9700011",
+    "name": "MV Ocean Pioneer",
+    "operator": "OceanLine Shipping",
+    "ownFleet": true,
+    "loaM": 300,
+    "draftM": 13.5,
+    "capacityTeu": 6500,
+    "voyage": {
+      "voyageNo": "026E",
+      "from": "Shenzhen",
+      "to": "Pelabuhan Nusa Raya (fiktif)",
+      "scheduledEtaUtc": "2026-11-20T01:00:00Z",
+      "plannedDepartureUtc": "2026-11-20T11:20:00Z",
+      "plannedSpeedKn": 18.0,
+      "distanceRemainingNm": 144.0,
+      "preferredBerth": "B1"
+    },
+    "position": {
+      "lat": -3.7,
+      "lon": 106.88,
+      "reportedAtUtc": "2026-11-19T17:00:00Z"
+    },
+    "cargo": {
+      "importContainers": 400
+    },
+    "status": "UNDERWAY"
+  },
+  {
+    "vesselId": "V002",
+    "imo": "IMO9700022",
+    "name": "MV Ocean Mercury",
+    "operator": "OceanLine Shipping",
+    "ownFleet": true,
+    "loaM": 260,
+    "draftM": 12.0,
+    "capacityTeu": 4800,
+    "voyage": {
+      "voyageNo": "114W",
+      "from": "Chennai",
+      "to": "Pelabuhan Nusa Raya (fiktif)",
+      "scheduledEtaUtc": "2026-11-20T02:00:00Z",
+      "plannedDepartureUtc": "2026-11-20T10:20:00Z",
+      "plannedSpeedKn": 17.0,
+      "distanceRemainingNm": 153.0,
+      "preferredBerth": "B1"
+    },
+    "position": {
+      "lat": -6.3222,
+      "lon": 104.3397,
+      "reportedAtUtc": "2026-11-19T17:00:00Z"
+    },
+    "cargo": {
+      "importContainers": 250
+    },
+    "status": "UNDERWAY"
+  },
+  {
+    "vesselId": "V003",
+    "imo": "IMO9700033",
+    "name": "MV Ocean Kartika",
+    "operator": "OceanLine Shipping",
+    "ownFleet": true,
+    "loaM": 280,
+    "draftM": 12.5,
+    "capacityTeu": 5200,
+    "voyage": {
+      "voyageNo": "087S",
+      "from": "Ho Chi Minh City",
+      "to": "Pelabuhan Nusa Raya (fiktif)",
+      "scheduledEtaUtc": "2026-11-20T04:00:00Z",
+      "plannedDepartureUtc": "2026-11-20T13:00:00Z",
+      "plannedSpeedKn": 16.0,
+      "distanceRemainingNm": 176.0,
+      "preferredBerth": "B2"
+    },
+    "position": {
+      "lat": -3.3436,
+      "lon": 107.8833,
+      "reportedAtUtc": "2026-11-19T17:00:00Z"
+    },
+    "cargo": {
+      "importContainers": 300
+    },
+    "status": "UNDERWAY"
+  },
+  {
+    "vesselId": "V004",
+    "imo": "IMO9611044",
+    "name": "MV Selat Biru",
+    "operator": "PT Pelayaran Mitra",
+    "ownFleet": false,
+    "loaM": 200,
+    "draftM": 10.5,
+    "capacityTeu": 2500,
+    "voyage": {
+      "voyageNo": "S12",
+      "from": "Singapore",
+      "to": "Pelabuhan Nusa Raya (fiktif)",
+      "scheduledEtaUtc": "2026-11-19T23:00:00Z",
+      "plannedDepartureUtc": "2026-11-20T08:05:27Z",
+      "plannedSpeedKn": 14.0,
+      "distanceRemainingNm": 84.0,
+      "preferredBerth": "B3"
+    },
+    "position": {
+      "lat": -5.1101,
+      "lon": 105.8901,
+      "reportedAtUtc": "2026-11-19T17:00:00Z"
+    },
+    "cargo": {
+      "importContainers": 180
+    },
+    "status": "UNDERWAY"
+  },
+  {
+    "vesselId": "V005",
+    "imo": "IMO9700055",
+    "name": "MV Ocean Rinjani",
+    "operator": "OceanLine Shipping",
+    "ownFleet": true,
+    "loaM": 290,
+    "draftM": 13.0,
+    "capacityTeu": 6000,
+    "voyage": {
+      "voyageNo": "045S",
+      "from": "Busan",
+      "to": "Pelabuhan Nusa Raya (fiktif)",
+      "scheduledEtaUtc": "2026-11-20T07:00:00Z",
+      "plannedDepartureUtc": "2026-11-20T16:40:00Z",
+      "plannedSpeedKn": 17.0,
+      "distanceRemainingNm": 238.0,
+      "preferredBerth": "B2"
+    },
+    "position": {
+      "lat": -3.2951,
+      "lon": 109.6849,
+      "reportedAtUtc": "2026-11-19T17:00:00Z"
+    },
+    "cargo": {
+      "importContainers": 350
+    },
+    "status": "UNDERWAY"
+  },
+  {
+    "vesselId": "V006",
+    "imo": "IMO9522066",
+    "name": "MV Bahari Lestari",
+    "operator": "Samudera Kargo Nusantara",
+    "ownFleet": false,
+    "loaM": 190,
+    "draftM": 10.0,
+    "capacityTeu": 2000,
+    "voyage": {
+      "voyageNo": "K77",
+      "from": "Port Klang",
+      "to": "Pelabuhan Nusa Raya (fiktif)",
+      "scheduledEtaUtc": "2026-11-20T09:00:00Z",
+      "plannedDepartureUtc": "2026-11-20T17:24:32Z",
+      "plannedSpeedKn": 13.0,
+      "distanceRemainingNm": 208.0,
+      "preferredBerth": "B3"
+    },
+    "position": {
+      "lat": -3.0978,
+      "lon": 108.6133,
+      "reportedAtUtc": "2026-11-19T17:00:00Z"
+    },
+    "cargo": {
+      "importContainers": 150
+    },
+    "status": "UNDERWAY"
+  }
+]

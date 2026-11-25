@@ -1,0 +1,29 @@
+{
+  "enterprise": "importexport",
+  "owner": "ImportExport Corp (fiktif)",
+  "description": "G_4 - Kebijakan tata kelola ImportExport Corp",
+  "access": {
+    "audit": ["control_center"],
+    "pesanan": ["control_center"],
+    "pengiriman": ["control_center"],
+    "dokumen": ["customs"],
+    "analisis": ["control_center"],
+    "kontrak": ["control_center"],
+    "status_pengiriman": ["control_center", "globalcargo", "smartport"],
+    "kpi": ["control_center"],
+    "tool:get_document_readiness": ["customs", "smartport", "control_center"]
+  },
+  "data_minimization": [
+    "Nilai PO & denda internal tidak dibagikan; GlobalCargo hanya menerima bobot prioritas pengiriman",
+    "SmartPort hanya menerima status kelengkapan dokumen per kapal (COMPLETE/INCOMPLETE), bukan isi dokumen",
+    "Isi dokumen lengkap hanya untuk Customs Authority"
+  ],
+  "decision_policy": {
+    "max_standard_trip_price_jt": 4.0,
+    "express_requires_benefit_ratio": 1.2,
+    "auto_submit_declaration": true
+  },
+  "human_approval_required": ["Biaya express > Rp 50 juta per shipment (Procurement Manager)",
+                              "Koreksi nilai pabean atas permintaan Bea Cukai"],
+  "ai_limits": ["Agen tidak memalsukan / mengubah isi dokumen; hanya mengklasifikasi, mengekstrak, dan memvalidasi"]
+}

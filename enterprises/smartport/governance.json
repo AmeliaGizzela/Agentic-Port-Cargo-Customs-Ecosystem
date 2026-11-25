@@ -1,0 +1,38 @@
+{
+  "enterprise": "smartport",
+  "owner": "SmartPort Terminal (fiktif)",
+  "description": "G_2 - Kebijakan tata kelola SmartPort Terminal",
+  "access": {
+    "audit": ["control_center"],
+    "berths": ["control_center"],
+    "vessel_calls": ["control_center"],
+    "berth_plan": ["control_center"],
+    "berth_plan_shared": ["oceanline", "globalcargo", "importexport", "control_center"],
+    "yard": ["control_center"],
+    "availability": ["globalcargo", "importexport", "control_center"],
+    "negotiations": ["control_center"],
+    "planner": ["control_center"],
+    "kpi": ["control_center"],
+    "tool:get_berth_plan": ["oceanline", "globalcargo", "importexport", "control_center"],
+    "tool:get_container_availability": ["globalcargo", "importexport", "control_center"]
+  },
+  "data_minimization": [
+    "OceanLine hanya menerima jendela sandar kapal miliknya (kapal pelayaran lain tidak dibuka)",
+    "GlobalCargo hanya menerima ketersediaan kontainer yang trucker-nya GlobalCargo",
+    "ImportExport hanya menerima status kontainer miliknya"
+  ],
+  "decision_policy": {
+    "pending_doc_priority_factor": 0.15,
+    "freeze_window_h": 0.5,
+    "max_concession_jt": 40,
+    "negotiation_max_rounds": 3,
+    "max_options": 4,
+    "yard_transfer_h": 0.5,
+    "est_customs_lead_h": 1.0
+  },
+  "human_approval_required": [
+    "Publikasi rencana dermaga yang memindahkan > 3 kapal sekaligus (Port Planner)",
+    "Pelepasan kontainer tanpa SPPB/release resmi Bea Cukai (dilarang)"
+  ],
+  "ai_limits": ["Container release ke gate hanya setelah status RELEASED dari Customs Authority"]
+}

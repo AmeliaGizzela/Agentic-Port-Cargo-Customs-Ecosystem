@@ -1,0 +1,13 @@
+B/L - COMBINED TRANSPORT
+B/L No: OLSZ260451
+Shipper: Shenzhen Microtech Co., Ltd
+Consignee: PT ImportExport Corp
+Notify Party: SAME AS CONSIGNEE
+Vessel: MV Ocean Pioneer  Voyage: 026E
+Port of Loading: Shenzhen
+Port of Discharge: Nusa Raya, Indonesia
+Number of Containers: 8
+Gross Weight: 64,000 kg
+Freight: PREPAID
+SHIPPED ON BOARD in apparent good order and condition.
+Container Nos: OCLU4335942, OCLU8038374, OCLU4698379

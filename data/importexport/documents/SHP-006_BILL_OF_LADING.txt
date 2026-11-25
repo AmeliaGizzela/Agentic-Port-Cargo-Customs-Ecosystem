@@ -1,0 +1,13 @@
+B/L - COMBINED TRANSPORT
+Shipper: Dongguan Mobile Tech Ltd
+Consignee: PT ImportExport Corp
+Port of Discharge: Nusa Raya, Indonesia
+Number of Containers: 4
+Container Nos: OCLU1009594, OCLU6438436, OCLU9197443
+Gross Weight: 16,000 kg
+SHIPPED ON BOARD in apparent good order and condition.
+Freight: PREPAID
+B/L No: OLHC260471
+Notify Party: SAME AS CONSIGNEE
+Vessel: MV Ocean Kartika  Voyage: 087S
+Port of Loading: Ho Chi Minh City

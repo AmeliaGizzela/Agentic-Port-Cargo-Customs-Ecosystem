@@ -1,0 +1,7 @@
+call_id,vessel_id,vessel_name,carrier,is_partner_agent,loa_m,draft_m,containers,eta_sched,eta_current,planned_departure,doc_status,pref_berth,status
+CALL-V001,V001,MV Ocean Pioneer,OceanLine Shipping,1,300,13.5,400,2026-11-20 08:00,2026-11-20 08:00,2026-11-20 18:20,UNKNOWN,B1,EXPECTED
+CALL-V002,V002,MV Ocean Mercury,OceanLine Shipping,1,260,12.0,250,2026-11-20 09:00,2026-11-20 09:00,2026-11-20 17:20,UNKNOWN,B1,EXPECTED
+CALL-V003,V003,MV Ocean Kartika,OceanLine Shipping,1,280,12.5,300,2026-11-20 11:00,2026-11-20 11:00,2026-11-20 20:00,UNKNOWN,B2,EXPECTED
+CALL-V004,V004,MV Selat Biru,PT Pelayaran Mitra,0,200,10.5,180,2026-11-20 06:00,2026-11-20 06:00,2026-11-20 15:05,UNKNOWN,B3,EXPECTED
+CALL-V005,V005,MV Ocean Rinjani,OceanLine Shipping,1,290,13.0,350,2026-11-20 14:00,2026-11-20 14:00,2026-11-20 23:40,UNKNOWN,B2,EXPECTED
+CALL-V006,V006,MV Bahari Lestari,Samudera Kargo Nusantara,0,190,10.0,150,2026-11-20 16:00,2026-11-20 16:00,2026-11-21 00:24,UNKNOWN,B3,EXPECTED

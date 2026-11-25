@@ -1,0 +1,12 @@
+PACKING LIST
+Ref. Invoice No: INV-0470-005
+Shipper: Pohang Steel Trading Co.
+Consignee: PT ImportExport Corp
+Goods: Hot-rolled flat steel plates
+Quantity: 150 plates
+Packages: 6 x 40' HC containers
+Gross Weight: 151,200 kg
+Net Weight: 145,152 kg
+Measurement: 402 CBM
+Marks & Numbers: AS PER ATTACHED SHEET
+Each pallet shrink-wrapped and labelled with carton count.

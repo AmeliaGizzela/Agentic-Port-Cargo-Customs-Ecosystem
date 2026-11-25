@@ -1,0 +1,14 @@
+COMMERCIAL INVOICE
+Invoice No: INV-0452-002
+Date: 28/10/2026
+Seller / Exporter: Nagoya Precision Gear K.K.
+Buyer / Consignee: PT ImportExport Corp
+Description of Goods: Gear boxes and transmission parts
+HS Code: 8483.40
+Quantity: 1,200 units
+Unit Price: USD 175.00
+Total Amount: USD 210,000.00
+Incoterms: CIF Nusa Raya
+Country of Origin: Japan
+Payment Terms: L/C at sight
+Amount due for payment as invoiced.

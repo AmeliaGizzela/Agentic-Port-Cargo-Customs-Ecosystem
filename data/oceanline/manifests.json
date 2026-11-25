@@ -1,0 +1,68 @@
+[
+  {
+    "vesselId": "V001",
+    "blNo": "OLSZ260451",
+    "consignee": "PT ImportExport Corp",
+    "shipmentRef": "SHP-001",
+    "hsCode": "8542.31",
+    "cargoDescription": "Integrated circuits (microcontroller units)",
+    "containers": 8,
+    "grossWeightKg": 64000,
+    "portOfLoading": "Shenzhen"
+  },
+  {
+    "vesselId": "V001",
+    "blNo": "OLSZ260452",
+    "consignee": "PT ImportExport Corp",
+    "shipmentRef": "SHP-002",
+    "hsCode": "8483.40",
+    "cargoDescription": "Gear boxes and transmission parts",
+    "containers": 6,
+    "grossWeightKg": 96000,
+    "portOfLoading": "Shenzhen"
+  },
+  {
+    "vesselId": "V002",
+    "blNo": "OLCH260460",
+    "consignee": "PT ImportExport Corp",
+    "shipmentRef": "SHP-003",
+    "hsCode": "2915.12",
+    "cargoDescription": "Salts of formic acid (sodium formate) - industrial chemical",
+    "containers": 5,
+    "grossWeightKg": 110000,
+    "portOfLoading": "Chennai"
+  },
+  {
+    "vesselId": "V003",
+    "blNo": "OLHC260463",
+    "consignee": "PT ImportExport Corp",
+    "shipmentRef": "SHP-004",
+    "hsCode": "5208.52",
+    "cargoDescription": "Printed plain-weave cotton fabric",
+    "containers": 7,
+    "grossWeightKg": 120000,
+    "portOfLoading": "Ho Chi Minh City"
+  },
+  {
+    "vesselId": "V005",
+    "blNo": "OLBS260470",
+    "consignee": "PT ImportExport Corp",
+    "shipmentRef": "SHP-005",
+    "hsCode": "7208.51",
+    "cargoDescription": "Hot-rolled flat steel plates",
+    "containers": 6,
+    "grossWeightKg": 150000,
+    "portOfLoading": "Busan"
+  },
+  {
+    "vesselId": "V003",
+    "blNo": "OLHC260471",
+    "consignee": "PT ImportExport Corp",
+    "shipmentRef": "SHP-006",
+    "hsCode": "8517.13",
+    "cargoDescription": "Smartphones (cellular handsets)",
+    "containers": 4,
+    "grossWeightKg": 16000,
+    "portOfLoading": "Ho Chi Minh City"
+  }
+]

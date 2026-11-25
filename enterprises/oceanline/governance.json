@@ -1,0 +1,32 @@
+{
+  "enterprise": "oceanline",
+  "owner": "OceanLine Shipping (fiktif)",
+  "description": "G_1 - Kebijakan tata kelola OceanLine Shipping",
+  "access": {
+    "audit": ["control_center"],
+    "vessels": ["smartport", "control_center"],
+    "fleet_eta": ["smartport", "importexport", "control_center"],
+    "manifests": ["customs"],
+    "eta_predictions": ["control_center"],
+    "negotiations": ["control_center"],
+    "berth_windows": ["control_center"],
+    "kpi": ["control_center"],
+    "model": ["control_center"],
+    "tool:get_vessel_eta": ["smartport", "importexport", "globalcargo", "control_center"],
+    "tool:get_manifest": ["customs"],
+    "tool:predict_eta": ["control_center"]
+  },
+  "data_minimization": [
+    "Manifest kargo lengkap (BC 1.1) hanya dibagikan ke Customs Authority",
+    "ImportExport Corp hanya menerima Bill of Lading miliknya sendiri",
+    "Fungsi biaya/utilitas internal tidak dibagikan; mitra hanya menerima ACCEPT/COUNTER_PROPOSE"
+  ],
+  "decision_policy": {
+    "eta_change_threshold_h": 0.5,
+    "max_acceptable_cost_jt": 150,
+    "negotiation_max_rounds": 3,
+    "jit_notice_h": 6
+  },
+  "human_approval_required": ["Deviasi rute / perubahan pelabuhan tujuan kapal"],
+  "ai_limits": ["Agen tidak mengendalikan navigasi kapal nyata; hanya prediksi ETA dan negosiasi jadwal sandar (simulasi)"]
+}
